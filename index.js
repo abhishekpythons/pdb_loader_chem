@@ -1,6 +1,6 @@
-// const express = require('express');
-// const { readFile } = require('fs');
-// const { loader } = require('three')
+const express = require('express');
+const { readFile } = require('fs');
+const { loader } = require('three')
 
 const app = express()
 app.get('/', (request, response) => {
