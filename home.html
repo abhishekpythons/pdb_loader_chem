@@ -25,8 +25,8 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "../build/three.module.js",
-					"three/addons/": "./jsm/"
+					"three": "https://unpkg.com/three@v0.149.0/build/three.module.js",
+						"three/addons/": "https://unpkg.com/three@v0.149.0/examples/jsm/"
 				}
 			}
 		</script>
@@ -58,29 +58,31 @@
 			};
 
 			const MOLECULES = {
-				'Ethanol': 'ethanol.pdb',
-				'Aspirin': 'aspirin.pdb',
-				'Caffeine': 'caffeine.pdb',
-				'Nicotine': 'nicotine.pdb',
-				'LSD': 'lsd.pdb',
-				'Cocaine': 'cocaine.pdb',
-				'Cholesterol': 'cholesterol.pdb',
-				'Lycopene': 'lycopene.pdb',
-				'Glucose': 'glucose.pdb',
-				'Aluminium oxide': 'Al2O3.pdb',
-				'Cubane': 'cubane.pdb',
-				'Copper': 'cu.pdb',
-				'Fluorite': 'caf2.pdb',
-				'Salt': 'nacl.pdb',
-				'YBCO superconductor': 'ybco.pdb',
-				'Buckyball': 'buckyball.pdb',
-				// 'Diamond': 'diamond.pdb',
-				'Graphite': 'graphite.pdb'
+				'VIB': 'VIB.pdb',
+				'FA': 'FA.pdb'
+				// 'Ethanol': 'ethanol.pdb',
+				// 'Aspirin': 'aspirin.pdb',
+				// 'Caffeine': 'caffeine.pdb',
+				// 'Nicotine': 'nicotine.pdb',
+				// 'LSD': 'lsd.pdb',
+				// 'Cocaine': 'cocaine.pdb',
+				// 'Cholesterol': 'cholesterol.pdb',
+				// 'Lycopene': 'lycopene.pdb',
+				// 'Glucose': 'glucose.pdb',
+				// 'Aluminium oxide': 'Al2O3.pdb',
+				// 'Cubane': 'cubane.pdb',
+				// 'Copper': 'cu.pdb',
+				// 'Fluorite': 'caf2.pdb',
+				// 'Salt': 'nacl.pdb',
+				// 'YBCO superconductor': 'ybco.pdb',
+				// 'Buckyball': 'buckyball.pdb',
+				// // 'Diamond': 'diamond.pdb',
+				// 'Graphite': 'graphite.pdb'
 			};
 
 			const params = {
 				vizType: 2,
-				molecule: 'caffeine.pdb'
+				molecule: 'FA.pdb'
 			};
 
 			const loader = new PDBLoader();
@@ -119,7 +121,7 @@
 
 				};
 
-				baseSprite.src = 'textures/sprites/ball.png';
+				baseSprite.src = 'ball.png';
 
 				//
 
@@ -251,7 +253,7 @@
 
 			function loadMolecule( model ) {
 
-				const url = 'models/pdb/' + model;
+				const url = 'canonical_models/' + model;
 
 				for ( let i = 0; i < objects.length; i ++ ) {
 

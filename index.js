@@ -1,8 +1,9 @@
 const express = require('express');
 const { readFile } = require('fs');
-const { loader } = require('three')
+const { loader } = require('three');
 
 const app = express()
+app.use(express.static('public'))
 app.get('/', (request, response) => {
         readFile('./home.html', 'utf-8', (err, html) => {
             if (err){
@@ -13,3 +14,4 @@ app.get('/', (request, response) => {
 });
 
 app.listen(process.env.PORT || 3000, () => { console.log('app is listening at http://localhost:3000')})
+
