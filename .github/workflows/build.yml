@@ -24,8 +24,8 @@ jobs:
       - name: Build Vite.js App
         run: |
           npm run build  # Adjust the build script as needed
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "abhishekpythons@gmail.com"
+          git config --local user.name "abhishekpythons"
           git add dist -f
           git commit -m "Adding build folder"
           git push origin release_init  # Adjust the branch name as needed
@@ -40,8 +40,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "abhishekpythons@gmail.com"
+          git config --local user.name "abhishekpythons"
           git checkout release_init  # Adjust the branch name as needed
           git add dist -f
           git commit -m "Deploy Vite.js App"
