@@ -3,7 +3,7 @@ name: Build Vite.js App
 on:
   push:
     branches:
-      - master
+      - release_init
 
 jobs:
   build:
