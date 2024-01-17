@@ -22,7 +22,13 @@ jobs:
         run: npm install
 
       - name: Build Vite.js App
-        run: npm run build  # Adjust the build script as needed
+        run: |
+          npm run build  # Adjust the build script as needed
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add dist -f
+          git commit -m "Adding build folder"
+          git push origin release_init  # Adjust the branch name as needed
 
   deploy:
     runs-on: ubuntu-latest
